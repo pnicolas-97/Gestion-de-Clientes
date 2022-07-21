@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/newCustomer.css' %}">
+
+    <title>New Custom</title>
+</head>
+<body>
+
+<form method="POST" class="newCstm">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label class="form-label">Id Usuario</label>
+       {{formCliente.id_cliente}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nombres</label>
+        {{formCliente.nombre}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Apellido Paterno</label>
+        {{formCliente.apellidopaterno}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Apellido Materno</label>
+        {{formCliente.apellidomaterno}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Telefono</label>
+        {{formCliente.telefono}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ciudad</label>
+        {{formCliente.ciudad}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        {{formCliente.estado}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Deuda</label>
+        Deuda {{formCliente.totaldeuda}}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Tipo CLiente</label>
+        {{formCliente.tipocliente}}
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
