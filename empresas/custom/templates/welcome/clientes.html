@@ -51,7 +51,7 @@
             <td>{{client.apellidomaterno}}</td>
             <td><a href="detalles/{{client.id_cliente}}">Ver detalle</a></td>
             <td><a href="editar_custom/{{client.id_cliente}}">Editar</a></td>
-            <td><a href="eliminarCustom/{{client.id_cliente}}">Eliminar</a></td>
+            <td><button type="button" class="btn btn-outline-danger btn-sm"><a href="eliminarCustom/{{client.id_cliente}}">Eliminar</a></button></td>
         </tr>
         {%endfor%}
         </tbody>
